@@ -1,105 +1,125 @@
 Smart Helmet and Accident Detection System
- Overview
+1. Project Overview
 
-The Smart Helmet and Accident Detection System is an IoT-based safety solution designed to enhance the protection of two-wheeler riders. The system integrates multiple sensors with an ESP32 microcontroller to ensure helmet compliance, prevent drunk driving, detect accidents in real time, and automatically send emergency alerts with location details.
+The Smart Helmet and Accident Detection System is an IoT-based rider safety solution designed to reduce road accident fatalities and enforce responsible riding behavior. The system integrates multiple sensors with an ESP32 microcontroller to ensure helmet usage, detect alcohol consumption, identify accidents in real time, and automatically send emergency alerts along with the rider’s location.
 
-This project aims to reduce road accident fatalities by minimizing emergency response time and enforcing responsible riding behavior through intelligent automation.
+This project extends the functionality of conventional helmets by embedding intelligence and wireless communication, thereby enabling faster emergency response and improved road safety.
 
- Objectives
+2. Objectives
 
-Ensure the rider wears the helmet before vehicle ignition
+To ensure that the rider wears the helmet before vehicle ignition
 
-Detect alcohol consumption and prevent drunk driving
+To detect alcohol consumption and prevent drunk driving
 
-Automatically detect accidents using motion sensors
+To automatically detect accidents using motion and orientation sensors
 
-Send real-time emergency alerts with GPS location
+To transmit real-time location details during emergencies
 
-Improve road safety using low-cost embedded and IoT technologies
+To minimize emergency response time using automated alerts
 
- System Architecture
+3. System Description
 
-The system is built around the ESP32 microcontroller, which collects data from multiple sensors and triggers actions based on predefined conditions.
+The system continuously monitors helmet usage, alcohol levels, and motion parameters. In the event of abnormal acceleration or tilt indicating an accident, the system captures the rider’s location and sends an alert to registered emergency contacts through a wireless communication service.
 
-Key Functional Modules:
+4. System Architecture
 
-Helmet Wear Detection
+The system is built around the ESP32 microcontroller, which acts as the central processing and communication unit. All sensors interface with the ESP32, and decision logic is implemented through embedded software.
 
-Alcohol Detection
+4.1 Functional Modules
 
-Accident Detection
+Helmet Wearing Detection Module
 
-Location Tracking
+Alcohol Detection Module
 
-Emergency Alert System
+Accident Detection Module
 
- Hardware Components
+Location Tracking Module
 
-ESP32 Microcontroller – Central processing and wireless communication
+Emergency Alert and Communication Module
 
-MPU6050 Accelerometer & Gyroscope – Accident and tilt detection
+5. Hardware Components
 
-MQ-3 Alcohol Sensor – Detects alcohol in rider’s breath
+ESP32 Microcontroller
 
-IR Sensor – Detects helmet usage
+MPU6050 Accelerometer and Gyroscope
 
-GPS (via Google Maps integration) – Location tracking
+MQ-3 Alcohol Sensor
 
-Buzzer & LEDs – Audio-visual alerts
+IR Sensor for Helmet Detection
 
-Rechargeable Battery – Power supply
+Buzzer and Status LEDs
 
- Software Components
+Rechargeable Battery
 
-Arduino IDE – Programming and firmware upload
+Helmet Structure for Sensor Integration
 
-Embedded C/C++ – Control logic and sensor interfacing
+6. Software Components
 
-Twilio API – SMS/WhatsApp emergency alerts
+Arduino IDE for firmware development
 
-ESP32 Web Server – Location updates and monitoring
+Embedded C/C++ for sensor interfacing and control logic
 
- Working Principle
+Twilio API for SMS and WhatsApp alert transmission
+
+ESP32 Web Server for location updates
+
+7. Working Methodology
 
 The IR sensor verifies whether the helmet is worn.
 
-The MQ-3 sensor checks for alcohol levels in the rider’s breath.
+The MQ-3 sensor monitors alcohol concentration in the rider’s breath.
 
-The MPU6050 continuously monitors acceleration and orientation.
+The MPU6050 continuously measures acceleration and orientation.
 
-If a severe impact and abnormal tilt are detected, an accident is confirmed.
+Sudden impact and abnormal tilt trigger accident detection.
 
-GPS coordinates are captured and sent via Twilio to registered emergency contacts.
+GPS coordinates are captured through mobile integration.
 
-A manual SOS trigger is also provided for emergencies.
+Emergency alerts with location details are sent automatically to predefined contacts.
 
- Results
+8. Results and Observations
 
-Helmet usage, alcohol detection, and accident detection achieved 93–96% accuracy
+Helmet usage, alcohol detection, and accident detection achieved a reliability of approximately 93–96%.
 
-Emergency alerts delivered within 5 seconds
+Emergency alerts were delivered within an average delay of less than 5 seconds.
 
-Reliable real-time location sharing through Google Maps
+Real-time location sharing was successfully implemented using Google Maps.
 
-Successful SMS/WhatsApp alert delivery using Twilio
+The system demonstrated stable and consistent performance during testing.
 
- Future Enhancements
+9. Advantages
 
-Machine learning-based accident severity classification
+Improves rider safety through automation
 
-Dedicated mobile application for live tracking and alerts
+Reduces dependency on bystanders during emergencies
 
-Integration of health monitoring sensors (heart rate, ECG)
+Cost-effective and scalable design
 
-Cloud-based data logging and analytics
+Easy integration with existing helmets
 
-Compact and lightweight helmet module design
+10. Limitations
 
- Academic Details
+GPS accuracy may reduce in enclosed or low-signal areas
 
-Course: Mini Project
+Sensor calibration is required to minimize false alerts
 
-Degree: Bachelor of Engineering (B.E.)
+Depends on internet connectivity for alert transmission
+
+11. Future Enhancements
+
+Integration of machine learning for accident severity classification
+
+Development of a dedicated mobile application
+
+Addition of health monitoring sensors such as heart rate or ECG
+
+Cloud-based data storage and analytics
+
+Compact and ergonomic hardware design improvements
+
+12. Academic Information
+
+Degree: Bachelor of Engineering
 
 Branch: Electronics and Communication Engineering
 
@@ -109,13 +129,13 @@ Institute: Bangalore Institute of Technology, Bengaluru
 
 Academic Year: 2025–2026
 
- Team Members
+13. Project Team
 
 Rakshita (1BI23EC124)
 
 Shreya Biradar (1BI23EC149)
 
- Project Guide
+14. Project Guide
 
 Ms. V. Shylaja
 Assistant Professor
